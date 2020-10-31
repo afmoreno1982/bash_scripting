@@ -43,7 +43,7 @@ if [ -e ../input/fahrenheit.txt ]; then
    fi
 
    for temperatura in ${arreglo_temperatura[@]}; do
-       farhenheit_to_centigrados $temperatura
+       farhenheit_a_centigrados $temperatura
    done
 
   else
