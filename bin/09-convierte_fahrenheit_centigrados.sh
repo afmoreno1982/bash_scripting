@@ -36,14 +36,6 @@ if [ -e ../input/fahrenheit.txt ]; then
    echo "El archivo tiene $contador líneas"
    echo ""
 
-   if [ -d ../output ]; then
-     mkdir ../output
-   fi
-
-   if [ -e ../output/centigrados.txt ]; then
-     rm ../output/centigrados.txt
-   fi
-
    for temperatura in ${arreglo_temperatura[@]}; do
        farhenheit_a_centigrados $temperatura
    done
