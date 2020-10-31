@@ -3,10 +3,10 @@
 # Código que muestra como usar funciones leyendo de un archivo con temperaturas en escala Farhenheit para convertirlo a Centígrados tanto en pantalla como en archivo
 # ./09-convierte_fahrenheit_centigrados.sh 
 
-farhenheit_to_centigrados () {
+farhenheit_a_centigrados () {
    centigrados=$(echo "scale=2;($temperatura - 32) * (5/9)"| bc)
    echo $centigrados
-   echo $centigrados >> ../input/centigrados.txt
+   echo $centigrados >> ../output/centigrados.txt
 }
 
 contador=0
@@ -25,8 +25,12 @@ if [ -e ../input/fahrenheit.txt ]; then
    echo "El archivo tiene $contador líneas"
    echo ""
 
-   if [ -e ../input/centigrados.txt ]; then
-     rm ../input/centigrados.txt
+   if [ -d ../output ]; then
+     mkdir ../output
+   fi
+
+   if [ -e ../output/centigrados.txt ]; then
+     rm ../output/centigrados.txt
    fi
 
    for temperatura in ${arreglo_temperatura[@]}; do
