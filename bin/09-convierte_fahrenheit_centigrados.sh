@@ -4,9 +4,9 @@
 # ./09-convierte_fahrenheit_centigrados.sh 
 
 farhenheit_to_centigrados () {
-   centigrados=$(echo "scale=2;($fahrenheit-32)*(5/9)"|bc)
+   centigrados=$(echo "scale=2;($temperatura - 32) * (5/9)"| bc)
    echo $centigrados
-   $centigrados >> ../input/centigrados.txt
+   echo $centigrados >> ../input/centigrados.txt
 }
 
 contador=0
@@ -25,7 +25,9 @@ if [ -e ../input/fahrenheit.txt ]; then
    echo "El archivo tiene $contador líneas"
    echo ""
 
-   /dev/null > ../input/centigrados.txt
+   if [ -e ../input/centigrados.txt ]; then
+     rm ../input/centigrados.txt
+   fi
 
    for temperatura in ${arreglo_temperatura[@]}; do
        farhenheit_to_centigrados $temperatura
