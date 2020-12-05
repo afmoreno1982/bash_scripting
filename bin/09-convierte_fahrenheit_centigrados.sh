@@ -7,13 +7,6 @@ if [ ! -d ../output ]; then
   mkdir ../output
 fi
 
-if [ ! -e ../output/centigrados.txt ]; then
-  touch ../output/centigrados.txt
-else
-  rm ../output/centigrados.txt
-  touch ../output/centigrados.txt
-fi
-
 farhenheit_a_centigrados () {
    temperatura_centigrados=$(echo "scale=2;($temperatura_farhenheit - 32) * (5/9)"| bc)
    echo $temperatura_farhenheit grados farhenheit equivalen a $temperatura_centigrados grados centígrados
