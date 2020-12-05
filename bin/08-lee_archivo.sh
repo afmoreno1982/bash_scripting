@@ -3,6 +3,8 @@
 # Código que muestra como leer archivos para crear directorios 
 # ./08-lee_archivo.sh 
 
+contador=0
+
 if [ -e ../input/directorios.txt ]; then
    echo "Existe archivo \"directorios.txt\""
    echo ""
