@@ -31,14 +31,14 @@ if [ -e ../input/directorios.txt ]; then
    echo "Creando directorios"
    echo ""
 
-   for directorio in ${arreglo_directorios[@]}; do
-     if [ -d ../test/$directorio ]; then
+   for directorio_a_crear in ${arreglo_directorios[@]}; do
+     if [ -d ../test/$directorio_a_crear ]; then
 
-      echo "Ya existe el directorio -- $directorio --"
+      echo "Ya existe el directorio -- $directorio_a_crear --"
 
      else
-      echo "Creando directorio -- $directorio --"
-      mkdir ../test/$directorio
+      echo "Creando directorio -- $directorio_a_crear --"
+      mkdir ../test/$directorio_a_crear
      fi
    done
 
