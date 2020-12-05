@@ -17,7 +17,7 @@ fi
 farhenheit_a_centigrados () {
    temperatura_centigrados=$(echo "scale=2;($temperatura_farhenheit - 32) * (5/9)"| bc)
    echo $temperatura_farhenheit grados farhenheit equivalen a $temperatura_centigrados grados centígrados
-   echo $temperatura_farhenheit,$temperatura_centigrados >> ../output/centigrados.txt
+   echo $temperatura_farhenheit,$temperatura_centigrados >> ../output/temperatura.txt
 }
 
 contador=0
@@ -36,7 +36,7 @@ if [ -e ../input/fahrenheit.txt ]; then
    echo "El archivo tiene $contador líneas"
    echo ""
 
-   echo "farhenheit,celsius" > ../output/temperatura.txt
+   echo "farhenheit,centigrados" > ../output/temperatura.txt
 
    for temperatura_farhenheit in ${arreglo_temperatura[@]}; do
        farhenheit_a_centigrados $temperatura_farhenheit
