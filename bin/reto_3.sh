@@ -7,4 +7,4 @@
 #    2. Obten el tamaño de la variable "palabra" y almacénalo en una variable que se llame "size"
 #    3. Imprime la variable "palabra" tantas veces de acuerdo al valor de la variable "size"
 #    4. Suma el valor de la variable "size" con el segundo parámetro y almacénalo en una variable que se llame "total"
-#    5. Imprime la variable de ambiente $USER las veces del valor de la variable "total"
+#    5. Imprime la variable de ambiente $USER tantas veces como el valor de la variable "total"
