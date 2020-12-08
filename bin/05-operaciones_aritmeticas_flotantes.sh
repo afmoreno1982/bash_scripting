@@ -9,10 +9,10 @@ read num_1
 echo "Ingresa segundo número flotante: "
 read num_2
 
-suma=$(echo "scale=2;$num_1 + $num_2" |bc)
-resta=$(echo "scale=2;$num_1 - $num_2" |bc)
-multiplicacion=$(echo "scale=2;$num_1 * $num_2" |bc)
-division=$(echo "scale=2;$num_1 / $num_2" |bc)
+suma=$(echo "scale=2;$num_1 + $num_2" | bc)
+resta=$(echo "scale=2;$num_1 - $num_2" | bc)
+multiplicacion=$(echo "scale=2;$num_1 * $num_2" | bc)
+division=$(echo "scale=2;$num_1 / $num_2" | bc)
 
 echo "La suma de $num_1 y $num_2 es $suma"
 echo "La resta de $num_1 y $num_2 es $resta"
